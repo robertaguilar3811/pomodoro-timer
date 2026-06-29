@@ -3,7 +3,11 @@
 A self-contained productivity timer built on Arduino Uno, featuring a 7-LED NeoPixel progress ring, SSD1306 OLED display, and single-button interface. Designed to be placed on a desk and operated without looking away from your work.
 
 <p align="center">
-  <img src="POMODORO TIMER.JPG" alt="Pomodoro Timer" width="400"/>
+  <img src="POMODORO TIMER.JPG" alt="CAD Model" width="300"/>
+</p>
+
+<p align="center">
+  <!-- Add real photo here -->
 </p>
 
 ---
