@@ -3,9 +3,7 @@
 A desk productivity timer built from scratch — custom hardware, embedded firmware, and a single-button interface that controls everything.
 
 <p align="center">
-  <img src="POMODORO TIMER.JPG" alt="CAD Model" width="300"/>
-  &nbsp;&nbsp;
-  <img src="IMG_0690.jpg" alt="Pomodoro Timer" width="300"/>
+  <img src="POMODORO TIMER.JPG" alt="CAD Model" width="550"/>
 </p>
 
 ---
@@ -14,9 +12,11 @@ A desk productivity timer built from scratch — custom hardware, embedded firmw
 
 | Component | Part |
 |-----------|------|
-| Microcontroller | Arduino Uno |
-| Display | SSD1306 128×64 OLED (I2C) |
-| LEDs | 7× NeoPixel |
+| Microcontroller | Arduino Uno R3 |
+| Breakout Board | GeeekPi Screw Terminal Hat for Arduino UNO |
+| Display | Hosyond 0.96" SSD1306 128×64 OLED (I2C, White) |
+| LEDs | WS2812B RGB LED Ring — 7× addressable NeoPixels |
+| Power | NightShade Electronics energyShield 2 Basic (rechargeable battery shield) |
 | Input | Tactile push button |
 
 ---
