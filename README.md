@@ -3,9 +3,9 @@
 A desk productivity timer built from scratch — custom hardware, embedded firmware, and a single-button interface that controls everything.
 
 <p align="center">
-  <img src="POMODORO TIMER.JPG" alt="CAD Model" height="300"/>
+  <img src="POMODORO TIMER.JPG" alt="CAD Model" width="300"/>
   &nbsp;&nbsp;
-  <img src="IMG_0690.jpg" alt="Pomodoro Timer" height="300"/>
+  <img src="IMG_0690.jpg" alt="Pomodoro Timer" width="300"/>
 </p>
 
 ---
