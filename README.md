@@ -3,7 +3,7 @@
 A desk productivity timer built from scratch — custom hardware, embedded firmware, and a single-button interface that controls everything.
 
 <p align="center">
-  <img src="POMODORO TIMER.JPG" alt="CAD Model" width="550"/>
+  <img src="model.JPG" alt="CAD Model" width="550"/>
 </p>
 
 ---
