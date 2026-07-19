@@ -31,7 +31,7 @@ int  tapCount = 0;
 bool waitingForDoubleTap = false;
 
 // --- Presets ---
-const int presets[]  = {15, 30, 45, 50, 60, 90};
+const int presets[]  = {10, 30, 45, 50, 60, 90};
 const int numPresets = sizeof(presets) / sizeof(presets[0]);
 int currentPreset = 0;
 
@@ -338,11 +338,16 @@ void loop() {
     float fraction = (float)remaining / (float)totalTime;
 
     uint8_t r, g, b;
-    if (fraction > 0.5f)       { r = 0;   g = 255; b = 0; }   // green
-    else if (fraction > 0.25f) { r = 255; g = 100; b = 0; }   // orange
-    else                       { r = 255; g = 0;   b = 0; }   // red
+    bool breathe;
+    if (remaining <= 5UL * 60UL * 1000UL) {
+      r = 255; g = 0;   b = 0; breathe = false; // red — last 5 min
+    } else if (fraction > 0.5f) {
+      r = 0;   g = 255; b = 0; breathe = true;  // green
+    } else {
+      r = 255; g = 100; b = 0; breathe = false; // orange
+    }
 
-    updateProgressRing(fraction, r, g, b, fraction > 0.5f);
+    updateProgressRing(fraction, r, g, b, breathe);
     showTime(remaining, totalTime, false);
 
     if (elapsed >= totalTime) {
@@ -357,7 +362,7 @@ void loop() {
     showTime(pausedRemaining, totalTime, true);
 
   } else if (state == DONE) {
-    if (now - lastFlashTime >= 500UL) {
+    if (now - lastFlashTime >= 2000UL) {
       lastFlashTime = now;
       flashOn = !flashOn;
       flashOn ? setAllColor(255, 0, 0) : setAllColor(0, 0, 0);
